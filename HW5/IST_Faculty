@@ -1,0 +1,26 @@
+Indent Level,Item and Group,Weight,Parent
+0,All Research Areas,1404,
+1,Data Sciences and Artificial Intelligence,359,All Research Areas
+2,Jonathan Dodge,32,Data Sciences and Artificial Intelligence
+2,Hadi Hosseini,65,Data Sciences and Artificial Intelligence
+2,Lu Lin,14,Data Sciences and Artificial Intelligence
+2,Aron Laszka,140,Data Sciences and Artificial Intelligence
+2,Fenglong Ma,108,Data Sciences and Artificial Intelligence
+1,Human-Computer Interaction,302,All Research Areas
+2,Saeed Abdullah,75,Human-Computer Interaction
+2,Syed Billah,31,Human-Computer Interaction
+2,Yubo Kou,65,Human-Computer Interaction
+2,Xinning Gui,60,Human-Computer Interaction
+2,Ting-Hao (Kenneth) Huang,71,Human-Computer Interaction
+1,Privacy and Security,266,All Research Areas
+2,Jinghui Chen,34,Privacy and Security
+2,Hong Hu,28,Privacy and Security
+2,Taegyu Kim,16,Privacy and Security
+2,Linhai Song,34,Privacy and Security
+2,Ting Wang,154,Privacy and Security
+1,Social and Organizational Informatics,477,All Research Areas
+2,Kelley Cotter,22,Social and Organizational Informatics
+2,Fred Fonseca,122,Social and Organizational Informatics
+2,Priya Kumar,45,Social and Organizational Informatics
+2,Carleen Maitland,169,Social and Organizational Informatics
+2,Lynette Yarger,119,Social and Organizational Informatics
