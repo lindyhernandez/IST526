@@ -1,0 +1,241 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "hconcat": [
+    {
+      "title": "Average SUS Score",
+      "data": {
+        "values": [
+          {
+            "participant": "P1",
+            "condition": "Condition 1: Details on Tooltip",
+            "SUS": 92.5
+          },
+          {
+            "participant": "P2",
+            "condition": "Condition 1: Details on Tooltip",
+            "SUS": 67.66
+          },
+          {
+            "participant": "P3",
+            "condition": "Condition 1: Details on Tooltip",
+            "SUS": 72.5
+          },
+          {
+            "participant": "P4",
+            "condition": "Condition 1: Details on Tooltip",
+            "SUS": 30
+          },
+          {
+            "participant": "P5",
+            "condition": "Condition 1: Details on Tooltip",
+            "SUS": 77.5
+          },
+          {
+            "participant": "P1",
+            "condition": "Condition 2: No Details on Tooltip",
+            "SUS": 52.5
+          },
+          {
+            "participant": "P2",
+            "condition": "Condition 2: No Details on Tooltip",
+            "SUS": 77.67
+          },
+          {
+            "participant": "P3",
+            "condition": "Condition 2: No Details on Tooltip",
+            "SUS": 80
+          },
+          {
+            "participant": "P4",
+            "condition": "Condition 2: No Details on Tooltip",
+            "SUS": 62.5
+          },
+          {
+            "participant": "P5",
+            "condition": "Condition 2: No Details on Tooltip",
+            "SUS": 77.5
+          }
+        ]
+      },
+      "width": 300,
+      "height": 400,
+      "layer": [
+        {
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "condition",
+              "type": "nominal",
+              "axis": {"labels": true}
+            },
+            "y": {
+              "aggregate": "mean",
+              "field": "SUS",
+              "type": "quantitative",
+              "axis": {"title": "SUS Score"},
+              "scale": {"domain": [0, 100]}
+            },
+            "color": {"field": "condition", "type": "nominal"},
+            "tooltip": [
+              {"field": "condition"},
+              {
+                "field": "SUS",
+                "type": "quantitative",
+                "aggregate": "mean",
+                "title": "Average SUS Score: "
+              },
+              {
+                "aggregate": "stdev",
+                "field": "SUS",
+                "type": "quantitative",
+                "title": "stdev"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {"type": "errorbar", "extent": "stdev"},
+          "encoding": {
+            "x": {"field": "condition", "type": "nominal"},
+            "y": {"field": "SUS", "type": "quantitative", "aggregate": "stdev"},
+            "tooltip": [
+              {"field": "condition"},
+              {
+                "field": "SUS",
+                "type": "quantitative",
+                "aggregate": "mean",
+                "title": "Average SUS Score: "
+              },
+              {
+                "aggregate": "stdev",
+                "field": "SUS",
+                "type": "quantitative",
+                "title": "stdev"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Average NASA-TLX Score",
+      "data": {
+        "values": [
+          {
+            "participant": "P1",
+            "condition": "Condition 1: Details on Tooltip",
+            "NASA": 22
+          },
+          {
+            "participant": "P2",
+            "condition": "Condition 1: Details on Tooltip",
+            "NASA": 75
+          },
+          {
+            "participant": "P3",
+            "condition": "Condition 1: Details on Tooltip",
+            "NASA": 36.33
+          },
+          {
+            "participant": "P4",
+            "condition": "Condition 1: Details on Tooltip",
+            "NASA": 83.33
+          },
+          {
+            "participant": "P5",
+            "condition": "Condition 1: Details on Tooltip",
+            "NASA": 37.66
+          },
+          {
+            "participant": "P1",
+            "condition": "Condition 2: No Details on Tooltip",
+            "NASA": 67
+          },
+          {
+            "participant": "P2",
+            "condition": "Condition 2: No Details on Tooltip",
+            "NASA": 47.5
+          },
+          {
+            "participant": "P3",
+            "condition": "Condition 2: No Details on Tooltip",
+            "NASA": 64.66
+          },
+          {
+            "participant": "P4",
+            "condition": "Condition 2: No Details on Tooltip",
+            "NASA": 45.33
+          },
+          {
+            "participant": "P5",
+            "condition": "Condition 2: No Details on Tooltip",
+            "NASA": 30.66
+          }
+        ]
+      },
+      "width": 300,
+      "height": 400,
+      "layer": [
+        {
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "condition",
+              "type": "nominal",
+              "axis": {"labels": true}
+            },
+            "y": {
+              "aggregate": "mean",
+              "field": "NASA",
+              "type": "quantitative",
+              "axis": {"title": "NASA-TLX Score"},
+              "scale": {"domain": [0, 100]}
+            },
+            "color": {"field": "condition", "type": "nominal"},
+            "tooltip": [
+              {"field": "condition"},
+              {
+                "field": "NASA",
+                "type": "quantitative",
+                "aggregate": "mean",
+                "title": "Average NASA-TLX Score: "
+              },
+              {
+                "aggregate": "stdev",
+                "field": "NASA",
+                "type": "quantitative",
+                "title": "stdev"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {"type": "errorbar", "extent": "stdev"},
+          "encoding": {
+            "x": {"field": "condition", "type": "nominal"},
+            "y": {
+              "field": "NASA",
+              "type": "quantitative",
+              "aggregate": "stdev"
+            },
+            "tooltip": [
+              {"field": "condition"},
+              {
+                "field": "NASA",
+                "type": "quantitative",
+                "aggregate": "mean",
+                "title": "Average NASA-TLX Score: "
+              },
+              {
+                "aggregate": "stdev",
+                "field": "NASA",
+                "type": "quantitative",
+                "title": "stdev"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
