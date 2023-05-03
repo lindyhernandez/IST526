@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/cars.json"},
+  "width": 1100,
+  "height": 700,
+  "layer": [
+    {
+      "transform": [
+        {
+          "aggregate": [
+            {"op": "mean", "field": "Horsepower", "as": "Horsepower"}
+          ],
+          "groupby": ["Name"]
+        }
+      ],
+      "mark": {"type": "bar", "tooltip": true},
+      "encoding": {
+        "y": {"field": "Horsepower", "type": "quantitative", "stack": null},
+        "x": {"field": "Name", "type": "Nominal", "axis": {"labels": false}},
+        "tooltip": [
+          {"field": "Name"},
+          {"field": "Horsepower"},
+          {"field": "Miles_per_Gallon"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "aggregate": [
+            {
+              "op": "mean",
+              "field": "Miles_per_Gallon",
+              "as": "Miles_per_Gallon"
+            }
+          ],
+          "groupby": ["Name"]
+        }
+      ],
+      "mark": {"type": "bar", "tooltip": true, "color": "orange"},
+      "encoding": {
+        "y": {
+          "field": "Miles_per_Gallon",
+          "type": "quantitative",
+          "stack": null
+        },
+        "x": {"field": "Name", "type": "Nominal", "axis": {"labels": false}},
+        "tooltip": [
+          {"field": "Name"},
+          {"field": "Horsepower"},
+          {"field": "Miles_per_Gallon"}
+        ]
+      }
+    }
+  ]
+}
