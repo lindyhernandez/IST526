@@ -1,0 +1,265 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "hconcat": [
+    {
+      "title": "Task 1: Bar Graph",
+      "data": {
+        "values": [
+          {
+            "participant": "P1",
+            "task": "Bar Graph",
+            "condition": "Condition 1: Details on Tooltip",
+            "time": 17.33
+          },
+          {
+            "participant": "P2",
+            "task": "Bar Graph",
+            "condition": "Condition 1: Details on Tooltip",
+            "time": 84.86
+          },
+          {
+            "participant": "P3",
+            "task": "Bar Graph",
+            "condition": "Condition 1: Details on Tooltip",
+            "time": 45.89
+          },
+          {
+            "participant": "P4",
+            "task": "Bar Graph",
+            "condition": "Condition 1: Details on Tooltip",
+            "time": 31.15
+          },
+          {
+            "participant": "P5",
+            "task": "Bar Graph",
+            "condition": "Condition 1: Details on Tooltip",
+            "time": 12.07
+          },
+          {
+            "participant": "P1",
+            "task": "Bar Graph",
+            "condition": "Condition 2: No Details on Tooltip",
+            "time": 88.36
+          },
+          {
+            "participant": "P2",
+            "task": "Bar Graph",
+            "condition": "Condition 2: No Details on Tooltip",
+            "time": 19.31
+          },
+          {
+            "participant": "P3",
+            "task": "Bar Graph",
+            "condition": "Condition 2: No Details on Tooltip",
+            "time": 22
+          },
+          {
+            "participant": "P4",
+            "task": "Bar Graph",
+            "condition": "Condition 2: No Details on Tooltip",
+            "time": 18.63
+          },
+          {
+            "participant": "P5",
+            "task": "Bar Graph",
+            "condition": "Condition 2: No Details on Tooltip",
+            "time": 20.3
+          }
+        ]
+      },
+      "width": 300,
+      "height": 400,
+      "layer": [
+        {
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "condition",
+              "type": "nominal",
+              "axis": {"labels": true}
+            },
+            "y": {
+              "aggregate": "mean",
+              "field": "time",
+              "type": "quantitative",
+              "axis": {"title": "Time (seconds)"},
+              "scale": {"domain": [0, 100]}
+            },
+            "color": {"field": "condition", "type": "nominal"},
+            "tooltip": [
+              {"field": "condition"},
+              {
+                "field": "time",
+                "type": "quantitative",
+                "aggregate": "mean",
+                "title": "Average time (seconds): "
+              },
+              {
+                "aggregate": "stdev",
+                "field": "time",
+                "type": "quantitative",
+                "title": "stdev"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {"type": "errorbar", "extent": "stdev"},
+          "encoding": {
+            "x": {"field": "condition", "type": "nominal"},
+            "y": {
+              "field": "time",
+              "type": "quantitative",
+              "axis": {"title": "Time (seconds)"}
+            },
+            "tooltip": [
+              {"field": "condition"},
+              {
+                "field": "time",
+                "type": "quantitative",
+                "aggregate": "mean",
+                "title": "Average time (seconds): "
+              },
+              {
+                "aggregate": "stdev",
+                "field": "time",
+                "type": "quantitative",
+                "title": "stdev"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Task 2: Scatterplot",
+      "data": {
+        "values": [
+          {
+            "participant": "P1",
+            "task": "Scatterplot",
+            "condition": "Condition 1: Details on Tooltip",
+            "time": 9.69
+          },
+          {
+            "participant": "P2",
+            "task": "Scatterplot",
+            "condition": "Condition 1: Details on Tooltip",
+            "time": 20.57
+          },
+          {
+            "participant": "P3",
+            "task": "Scatterplot",
+            "condition": "Condition 1: Details on Tooltip",
+            "time": 15.9
+          },
+          {
+            "participant": "P4",
+            "task": "Scatterplot",
+            "condition": "Condition 1: Details on Tooltip",
+            "time": 42.89
+          },
+          {
+            "participant": "P5",
+            "task": "Scatterplot",
+            "condition": "Condition 1: Details on Tooltip",
+            "time": 11.87
+          },
+          {
+            "participant": "P1",
+            "task": "Scatterplot",
+            "condition": "Condition 2: No Details on Tooltip",
+            "time": 28.13
+          },
+          {
+            "participant": "P2",
+            "task": "Scatterplot",
+            "condition": "Condition 2: No Details on Tooltip",
+            "time": 150.03
+          },
+          {
+            "participant": "P3",
+            "task": "Scatterplot",
+            "condition": "Condition 2: No Details on Tooltip",
+            "time": 9.81
+          },
+          {
+            "participant": "P4",
+            "task": "Scatterplot",
+            "condition": "Condition 2: No Details on Tooltip",
+            "time": 16.57
+          },
+          {
+            "participant": "P5",
+            "task": "Scatterplot",
+            "condition": "Condition 2: No Details on Tooltip",
+            "time": 9.04
+          }
+        ]
+      },
+      "width": 300,
+      "height": 400,
+      "layer": [
+        {
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "condition",
+              "type": "nominal",
+              "axis": {"labels": true}
+            },
+            "y": {
+              "aggregate": "mean",
+              "field": "time",
+              "type": "quantitative",
+              "axis": {"title": "Time (seconds)"},
+              "scale": {"domain": [0, 100]}
+            },
+            "color": {"field": "condition", "type": "nominal"},
+            "tooltip": [
+              {"field": "condition"},
+              {
+                "field": "time",
+                "type": "quantitative",
+                "aggregate": "mean",
+                "title": "Average time (seconds): "
+              },
+              {
+                "aggregate": "stdev",
+                "field": "time",
+                "type": "quantitative",
+                "title": "stdev"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {"type": "errorbar", "extent": "stdev"},
+          "encoding": {
+            "x": {"field": "condition", "type": "nominal"},
+            "y": {
+              "field": "time",
+              "type": "quantitative",
+              "axis": {"title": "Time (seconds)"}
+            },
+            "tooltip": [
+              {"field": "condition"},
+              {
+                "field": "time",
+                "type": "quantitative",
+                "aggregate": "mean",
+                "title": "Average time (seconds): "
+              },
+              {
+                "aggregate": "stdev",
+                "field": "time",
+                "type": "quantitative",
+                "title": "stdev"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
